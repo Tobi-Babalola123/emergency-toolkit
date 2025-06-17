@@ -47,8 +47,10 @@ export default function ToolkitPage() {
           <h2 className="text-3xl font-bold text-center mb-8">
             Learn Key Emergency Response Skills
           </h2>
+
           <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6">
             {[
+              "Asthma Attacks",
               "Panic Attacks",
               "Physical Injuries",
               "Burns & Scalds",
@@ -59,7 +61,7 @@ export default function ToolkitPage() {
               "Fainting",
               "Allergic Reaction",
             ].map((skill, idx) => {
-              const slug = skill.toLowerCase().replace(/ & | /g, "-"); // Convert to URL-friendly slug
+              const slug = skill.toLowerCase().replace(/ & | /g, "-");
 
               return (
                 <Link key={idx} href={`/skills/${slug}`}>
